@@ -10,21 +10,19 @@ import {
   Building2,
   GraduationCap,
   Award,
-  Sparkles,
+  Mail,
+  Phone,
+  Github,
+  Linkedin,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { certifications } from "@/data/certifications";
-import { experiences, previousExperiences } from "@/data/experience";
-import { education } from "@/data/education";
-import { hobbies } from "@/data/hobbies";
-import { skillCategories } from "@/data/skills";
 
 export function AboutDetail() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-background">
       <div className="container mx-auto px-4 py-24">
-        {/* Profile Section - First thing recruiters see */}
+        {/* Profile Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,7 +33,7 @@ export function AboutDetail() {
             <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/10">
               <Image
                 src="/headshot/headshot-2024.jpg"
-                alt="Bjorn Melin"
+                alt="Nandha Kumar Reddy Kaipa"
                 fill
                 sizes="192px"
                 priority
@@ -43,32 +41,26 @@ export function AboutDetail() {
               />
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Bjorn Melin</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Nandha Kumar Reddy Kaipa</h1>
               <p className="text-xl text-muted-foreground mb-4">
-                Senior Data Scientist & Cloud Solutions Architect
+                Student at University of Windsor | Aspiring Data Engineer
               </p>
               <div className="flex flex-wrap gap-2">
                 <Badge variant="outline" className="bg-primary/10">
-                  <Cloud className="w-3 h-3 mr-2" /> AWS Certified
+                  <GraduationCap className="w-3 h-3 mr-2" /> University of Windsor
                 </Badge>
                 <Badge variant="outline" className="bg-primary/10">
-                  <Brain className="w-3 h-3 mr-2" /> AI/ML Expert
+                  <Brain className="w-3 h-3 mr-2" /> AI & ML
                 </Badge>
                 <Badge variant="outline" className="bg-primary/10">
-                  <Building2 className="w-3 h-3 mr-2" /> Cloud Architect
-                </Badge>
-                <Badge variant="outline" className="bg-primary/10">
-                  <Code className="w-3 h-3 mr-2" /> Full-Stack Developer
-                </Badge>
-                <Badge variant="outline" className="bg-primary/10">
-                  <Sparkles className="w-3 h-3 mr-2" /> Generative AI Evangelist
+                  <Code className="w-3 h-3 mr-2" /> Python & SQL
                 </Badge>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Professional Summary - Quick overview of value proposition */}
+        {/* Professional Summary */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,30 +74,60 @@ export function AboutDetail() {
             </h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                AI Engineer and Machine Learning Engineer based in Salt Lake City, specializing in deep learning, generative AI,
-                and LLM applications. With a proven track record of delivering multi-million-dollar solutions, I bring 
-                expertise in building scalable, cost-effective systems on AWS and transforming
-                operations through efficient, reliable, and strategically designed solutions.
+                I'm currently pursuing my Master of Applied Computing with an Artificial Intelligence Stream 
+                at the University of Windsor (80% current average), building upon my strong foundation in 
+                Computer Science and Engineering from Anna University (8.23 CGPA).
               </p>
               <p>
-                My recent achievements include leading a high-profile neuro-symbolic AI project that reduced training data needs
-                by 40% and solved complex material science challenges. I successfully migrated 3M&apos;s Corporate Research Analytical
-                Lab&apos;s infrastructure to AWS, cutting cloud costs by 60% and establishing scalable frameworks for manufacturing
-                and divisional teams. I&apos;ve developed custom Python packages, reusable IaC libraries, and modernized CI/CD pipelines,
-                consistently delivering 50%+ improvements in performance and deployment efficiency.
+                Through internships at Med Tour Easy and NULL CLASS, I've gained hands-on experience in 
+                data analytics, machine learning model development, and facial recognition systems. 
+                I've successfully led projects including cross-lingual SMS phishing detection achieving 
+                97.72% accuracy.
               </p>
               <p>
-                With multiple AWS certifications and a strong foundation in Mathematics and Computer Science from Augsburg University,
-                I&apos;ve evolved from software engineering to become a leader in cloud architecture and data science. I&apos;m passionate
-                about advancing AI technologies and developing solutions that enable operational excellence and innovation. Outside of tech,
-                I&apos;m an avid freestyle skier and outdoor enthusiast, bringing the same dedication to precision and continuous
-                improvement from the slopes to my professional work.
+                My technical expertise spans Python, Java, C/C++, MySQL, and machine learning frameworks. 
+                Currently seeking internship opportunities starting January 2025 as part of my program 
+                requirements.
               </p>
             </div>
           </Card>
         </motion.div>
 
-        {/* Skills Section */}
+        {/* Contact Info */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <Card className="p-8 backdrop-blur-xl bg-card/50 border-primary/10">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <Mail className="w-6 h-6 text-primary" />
+              Contact Information
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 text-primary" />
+                <span>kaipa@uwindsor.ca</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-primary" />
+                <span>+1 519-567-9924</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Linkedin className="w-5 h-5 text-primary" />
+                <a href="https://linkedin.com/in/kaipanandhakumarreddy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  LinkedIn Profile
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Github className="w-5 h-5 text-primary" />
+                <a href="https://github.com/Nandha2002" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  GitHub Profile
+                </a>
+              </div>
+            </div>
+          </Card>
+          {/* Skills Section - ADD THIS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -117,95 +139,63 @@ export function AboutDetail() {
             Skills & Expertise
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skillCategories.map((category) => (
-              <Card
-                key={category.name}
-                className="p-6 backdrop-blur-xl bg-card/50 border-primary/10"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <category.Icon className={`w-6 h-6 ${category.color}`} />
-                  <h3 className="text-xl font-semibold">{category.name}</h3>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {category.skills.map((skill) => (
-                    <Badge
-                      key={skill}
-                      variant="outline"
-                      className={`${category.color}`}
-                    >
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </Card>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Work Experience - Most important for recruiters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mb-20"
-        >
-          <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-            <Building2 className="w-8 h-8 text-primary" />
-            Work Experience
-          </h2>
-          <div className="space-y-6">
-            {experiences.map((exp) => (
-              <Card key={`${exp.title}-${exp.startDate}`} className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
-                <div className="flex flex-col md:flex-row justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold">{exp.title}</h3>
-                    <p className="text-primary">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {exp.location}{exp.isRemote ? " (Remote)" : ""}
-                    </p>
-                  </div>
-                  <p className="text-sm text-muted-foreground">{exp.startDate} - {exp.endDate}</p>
-                </div>
-                <ul className="space-y-2 text-muted-foreground ml-4">
-                  {exp.achievements.map((achievement, index) => (
-                    <li key={index} className="flex">
-                      <span className="mr-2">•</span>
-                      <span className="flex-1">{achievement.text}</span>
-                    </li>
-                  ))}
-                </ul>
-                {exp.skills.length > 0 && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {exp.skills.map((skill, index) => (
-                      <Badge key={index} variant="outline" className="bg-primary/5">
-                        {skill.name}
-                      </Badge>
-                    ))}
-                  </div>
-                )}
-              </Card>
-            ))}
-
             <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
-              <h3 className="text-xl font-semibold mb-4">Previous Experience</h3>
-              <div className="space-y-4">
-                {previousExperiences.map((exp) => (
-                  <div key={`${exp.title}-${exp.startDate}`}>
-                    <div className="flex justify-between mb-2">
-                      <p className="font-medium">{exp.title}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {exp.startDate} - {exp.endDate}
-                      </p>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{exp.company}</p>
-                  </div>
-                ))}
+              <div className="flex items-center gap-3 mb-4">
+                <Code className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Programming Languages</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline" className="bg-primary/5">Python</Badge>
+                <Badge variant="outline" className="bg-primary/5">Java</Badge>
+                <Badge variant="outline" className="bg-primary/5">C</Badge>
+                <Badge variant="outline" className="bg-primary/5">C++</Badge>
+                <Badge variant="outline" className="bg-primary/5">JavaScript</Badge>
+              </div>
+            </Card>
+            
+            <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
+              <div className="flex items-center gap-3 mb-4">
+                <Cloud className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Data & Analytics</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline" className="bg-primary/5">MySQL</Badge>
+                <Badge variant="outline" className="bg-primary/5">Machine Learning</Badge>
+                <Badge variant="outline" className="bg-primary/5">TF-IDF</Badge>
+                <Badge variant="outline" className="bg-primary/5">Random Forest</Badge>
+                <Badge variant="outline" className="bg-primary/5">SVM</Badge>
+                <Badge variant="outline" className="bg-primary/5">LSTM</Badge>
+              </div>
+            </Card>
+            
+            <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
+              <div className="flex items-center gap-3 mb-4">
+                <Building2 className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Systems & Methodologies</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline" className="bg-primary/5">UNIX</Badge>
+                <Badge variant="outline" className="bg-primary/5">Linux</Badge>
+                <Badge variant="outline" className="bg-primary/5">Agile</Badge>
+                <Badge variant="outline" className="bg-primary/5">Waterfall</Badge>
+              </div>
+            </Card>
+            
+            <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
+              <div className="flex items-center gap-3 mb-4">
+                <Brain className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-semibold">Web & Tools</h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="outline" className="bg-primary/5">HTML</Badge>
+                <Badge variant="outline" className="bg-primary/5">CSS</Badge>
+                <Badge variant="outline" className="bg-primary/5">Deep Learning</Badge>
+                <Badge variant="outline" className="bg-primary/5">Arduino</Badge>
               </div>
             </Card>
           </div>
         </motion.div>
-
-        {/* Certifications - Shows current skills and continuous learning */}
+        {/* Work Experience Section - ADD THIS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -213,81 +203,142 @@ export function AboutDetail() {
           className="mb-20"
         >
           <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-            <Award className="w-8 h-8 text-primary" />
-            AWS Certifications
+            <Building2 className="w-8 h-8 text-primary" />
+            Work Experience
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert) => (
-              <motion.div
-                key={cert.name}
-                whileHover={{ scale: 1.02 }}
-                className="relative"
-              >
-                <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10 hover:border-primary/30 transition-colors">
-                  <div className="flex flex-col gap-4">
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-start gap-4"
-                    >
-                      <Image
-                        src={cert.image}
-                        alt={cert.name}
-                        width={60}
-                        height={60}
-                        className="rounded-lg"
-                      />
-                      <div>
-                        <h3 className="font-semibold mb-1">{cert.name}</h3>
-                        <p className="text-sm text-muted-foreground">
-                          {cert.issuedBy}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          Issued: {cert.issuedDate}
-                        </p>
-                      </div>
-                    </a>
+          <div className="space-y-6">
+            <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
+              <div className="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold">Data Analytics Trainee</h3>
+                  <p className="text-primary">Med Tour Easy</p>
+                  <p className="text-sm text-muted-foreground">Delhi, India</p>
+                </div>
+                <p className="text-sm text-muted-foreground">Aug 2023 - Sep 2023</p>
+              </div>
+              <ul className="space-y-2 text-muted-foreground ml-4">
+                <li className="flex">
+                  <span className="mr-2">•</span>
+                  <span className="flex-1">Collaborated with a Data Analytics professional during a traineeship under a project mentor's guidance to gain hands-on experience in real-world data analysis</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-2">•</span>
+                  <span className="flex-1">Developed a project titled "Analyze Death Age Difference of Right-Hand users with Left-Hand users" using statistical methods and data visualization tools, enhanced understanding of age-related trends across handedness groups</span>
+                </li>
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Badge variant="outline" className="bg-primary/5">Python</Badge>
+                <Badge variant="outline" className="bg-primary/5">Machine Learning</Badge>
+                <Badge variant="outline" className="bg-primary/5">MySQL</Badge>
+                <Badge variant="outline" className="bg-primary/5">Data Visualization</Badge>
+              </div>
+            </Card>
 
-                    {cert.earlyAdopterBadge && (
-                      <>
-                        <div className="border-t border-primary/10 my-2" />
-                        <a
-                          href={cert.earlyAdopterBadge.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-3"
-                        >
-                          <Image
-                            src={cert.earlyAdopterBadge.image}
-                            alt={cert.earlyAdopterBadge.name}
-                            width={40}
-                            height={40}
-                            className="rounded-lg"
-                          />
-                          <div>
-                            <Badge variant="outline" className="bg-primary/5 mb-1">
-                              Early Adopter
-                            </Badge>
-                            <p className="text-xs text-muted-foreground">
-                              {cert.earlyAdopterBadge.name}
-                            </p>
-                          </div>
-                        </a>
-                      </>
-                    )}
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
+            <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
+              <div className="flex flex-col md:flex-row justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold">Machine Learning Development Intern</h3>
+                  <p className="text-primary">NULL CLASS</p>
+                  <p className="text-sm text-muted-foreground">Coimbatore, India</p>
+                </div>
+                <p className="text-sm text-muted-foreground">May 2023 - Jul 2023</p>
+              </div>
+              <ul className="space-y-2 text-muted-foreground ml-4">
+                <li className="flex">
+                  <span className="mr-2">•</span>
+                  <span className="flex-1">Completed a development internship focused on facial recognition techniques to strengthen practical skills in model building</span>
+                </li>
+                <li className="flex">
+                  <span className="mr-2">•</span>
+                  <span className="flex-1">Implemented tasks related to "Facial Features" using data processing and pattern recognition methods, improved accuracy in facial feature detection and classification</span>
+                </li>
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Badge variant="outline" className="bg-primary/5">Python</Badge>
+                <Badge variant="outline" className="bg-primary/5">SQL</Badge>
+                <Badge variant="outline" className="bg-primary/5">Machine Learning</Badge>
+                <Badge variant="outline" className="bg-primary/5">Deep Learning</Badge>
+              </div>
+            </Card>
           </div>
         </motion.div>
-
-        {/* Education - Supporting qualifications */}
+        {/* Projects Section - ADD THIS */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
+            <Code className="w-8 h-8 text-primary" />
+            Featured Projects
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
+              <div className="flex items-start justify-between mb-2">
+                <h3 className="text-xl font-semibold">Phishing Detection Model for SMS/Text Messages</h3>
+                <span className="text-xs text-muted-foreground">Jan 2025 - Apr 2025</span>
+              </div>
+              <p className="text-sm text-muted-foreground mb-2">University of Windsor</p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-3">
+                <li>Built a cross-lingual SMS phishing detector using Hindi and Telugu datasets with TF-IDF and preprocessing to enhance multilingual detection accuracy</li>
+                <li>Applied ML and Indic language models (SVM, Random Forest, LSTM, Indic BERT, Mu RIL) achieving up to 97.72% accuracy in phishing detection</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <Badge variant="outline" className="bg-primary/5">Python</Badge>
+                <Badge variant="outline" className="bg-primary/5">Machine Learning</Badge>
+                <Badge variant="outline" className="bg-primary/5">SQL</Badge>
+                <Badge variant="outline" className="bg-primary/5">TF-IDF</Badge>
+                <Badge variant="outline" className="bg-primary/5">LSTM</Badge>
+              </div>
+              <a href="https://github.com/Nandha2002/Group_Project" target="_blank" rel="noreferrer" className="text-primary underline text-sm">View on GitHub</a>
+            </Card>
+
+            <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
+              <div className="flex items-start justify-between mb-2">
+                <h3 className="text-xl font-semibold">AI and Sensor Driven System for Irrigation</h3>
+                <span className="text-xs text-muted-foreground">Jan 2024 - May 2024</span>
+              </div>
+              <p className="text-sm text-muted-foreground mb-2">Nehru Institute of Engineering and Technology</p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-3">
+                <li>Developed a smart irrigation system to determine and release required water level in agricultural fields based on real-time parameters soil moisture, humidity, and temperature</li>
+                <li>Automated water supply process operating sensor data analysis optimized water usage and improved crop health</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <Badge variant="outline" className="bg-primary/5">Python</Badge>
+                <Badge variant="outline" className="bg-primary/5">Machine Learning</Badge>
+                <Badge variant="outline" className="bg-primary/5">SQL</Badge>
+                <Badge variant="outline" className="bg-primary/5">Arduino</Badge>
+              </div>
+              <a href="https://github.com/Nandha2002/Personal_Project2" target="_blank" rel="noreferrer" className="text-primary underline text-sm">View on GitHub</a>
+            </Card>
+
+            <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10">
+              <div className="flex items-start justify-between mb-2">
+                <h3 className="text-xl font-semibold">Music Recommendation Using Facial Expression</h3>
+                <span className="text-xs text-muted-foreground">Dec 2021 - Jun 2023</span>
+              </div>
+              <p className="text-sm text-muted-foreground mb-2">Nehru Institute of Engineering and Technology</p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-3">
+                <li>Designed a system to identify user emotions through facial expressions leveraging Convolutional Neural Networks (CNN) to enable emotion-based interaction</li>
+                <li>Integrated Spotify API to fetch and play songs based on detected emotion provided a personalized music experience based on facial cues</li>
+              </ul>
+              <div className="flex flex-wrap gap-2 mb-3">
+                <Badge variant="outline" className="bg-primary/5">Python</Badge>
+                <Badge variant="outline" className="bg-primary/5">Machine Learning</Badge>
+                <Badge variant="outline" className="bg-primary/5">HTML</Badge>
+                <Badge variant="outline" className="bg-primary/5">CSS</Badge>
+                <Badge variant="outline" className="bg-primary/5">CNN</Badge>
+              </div>
+              <a href="https://github.com/Nandha2002/Personal_Project" target="_blank" rel="noreferrer" className="text-primary underline text-sm">View on GitHub</a>
+            </Card>
+          </div>
+        </motion.div>
+        {/* Education Section - ADD THIS */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="mb-20"
         >
           <Card className="p-8 backdrop-blur-xl bg-card/50 border-primary/10">
@@ -299,77 +350,133 @@ export function AboutDetail() {
               <div>
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
                   <div>
-                    <h3 className="font-semibold text-lg">{education.degree}</h3>
-                    <p className="text-muted-foreground">{education.school}</p>
+                    <h3 className="font-semibold text-lg">Master of Applied Computing, Artificial Intelligence Stream</h3>
+                    <p className="text-muted-foreground">University of Windsor • Windsor, Ontario, Canada</p>
                   </div>
                   <div className="text-right mt-1 md:mt-0">
-                    <p className="text-sm text-muted-foreground">
-                      {education.startDate} - {education.endDate}
-                    </p>
-                    <p className="text-sm font-medium text-primary">
-                      GPA: {education.gpa}
-                    </p>
+                    <p className="text-sm text-muted-foreground">Jan 2025 - Present</p>
+                    <p className="text-sm font-medium text-primary">Current Average: 80%</p>
                   </div>
                 </div>
-                <div className="mt-3">
-                  {education.honors.map((honor, index) => (
-                    <Badge
-                      key={index}
-                      variant="outline"
-                      className={`bg-primary/5 mb-2 ${index > 0 ? "ml-2" : ""}`}
-                    >
-                      {honor.name}
-                    </Badge>
-                  ))}
+                <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 ml-1">
+                  <li>Second semester requires a 4- or 8-month internship starting January 2025</li>
+                  <li>Advanced Software Engineering (Agile Methodology, Waterfall Methodology)</li>
+                  <li>Advanced Database Topics (Hadoop, Relational Databases)</li>
+                  <li>Advanced Systems Programming (UNIX and LINUX Commands)</li>
+                  <li>Machine Learning (Classification and Regression Algorithms)</li>
+                </ul>
+              </div>
+
+              <div className="border-t border-primary/10 pt-6">
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
+                  <div>
+                    <h3 className="font-semibold text-lg">Bachelor of Engineering, Computer Science and Engineering</h3>
+                    <p className="text-muted-foreground">Anna University • Chennai, India</p>
+                  </div>
+                  <div className="text-right mt-1 md:mt-0">
+                    <p className="text-sm text-muted-foreground">Jul 2020 - Jul 2024</p>
+                    <p className="text-sm font-medium text-primary">CGPA: 8.23</p>
+                  </div>
                 </div>
-                <div className="mt-4">
-                  <p className="text-sm font-medium mb-2">Activities and Societies:</p>
-                  <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 ml-2">
-                    {education.activities.map((activity, index) => (
-                      <li key={index}>{activity.name}</li>
-                    ))}
-                  </ul>
+                <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 ml-1">
+                  <li>Python Programming (Secured 90% score)</li>
+                  <li>Data Structures in C</li>
+                  <li>Object Oriented Programming in Java</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
+        {/* Certifications Section - ADD THIS */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
+            <Award className="w-8 h-8 text-primary" />
+            Certifications & Training
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div whileHover={{ scale: 1.02 }} className="relative">
+              <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10 hover:border-primary/30 transition-colors">
+                <div className="flex flex-col gap-4">
+                  <div>
+                    <h3 className="font-semibold mb-1">Google Advanced Data Analytics Specialization</h3>
+                    <p className="text-sm text-muted-foreground">Coursera</p>
+                    <p className="text-sm text-muted-foreground">Issued: Aug 2023</p>
+                    <a href="https://www.coursera.org/specializations/google-advanced-data-analytics" target="_blank" rel="noreferrer" className="text-primary underline text-xs">View Certificate</a>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+
+            <motion.div whileHover={{ scale: 1.02 }} className="relative">
+              <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10 hover:border-primary/30 transition-colors">
+                <div className="flex flex-col gap-4">
+                  <div>
+                    <h3 className="font-semibold mb-1">Google Data Analytics Specialization</h3>
+                    <p className="text-sm text-muted-foreground">Coursera</p>
+                    <p className="text-sm text-muted-foreground">Issued: Nov 2022</p>
+                    <a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" rel="noreferrer" className="text-primary underline text-xs">View Certificate</a>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+
+            <motion.div whileHover={{ scale: 1.02 }} className="relative">
+              <Card className="p-6 backdrop-blur-xl bg-card/50 border-primary/10 hover:border-primary/30 transition-colors">
+                <div className="flex flex-col gap-4">
+                  <div>
+                    <h3 className="font-semibold mb-1">Data Analyst Bootcamp</h3>
+                    <p className="text-sm text-muted-foreground">Grow Data Skills</p>
+                    <p className="text-sm text-muted-foreground">Issued: Nov 2023</p>
+                    <Badge variant="outline" className="bg-primary/5 w-fit">Bootcamp Completed</Badge>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
+          </div>
+        </motion.div>
+        {/* Volunteer Activities Section - ADD THIS */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="mb-20"
+        >
+          <Card className="p-8 backdrop-blur-xl bg-card/50 border-primary/10">
+            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
+              <Award className="w-6 h-6 text-primary" />
+              Extracurricular & Volunteer Activities
+            </h2>
+            <div className="space-y-4">
+              <div>
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
+                  <div>
+                    <h3 className="font-semibold text-lg">Field Re-Setter</h3>
+                    <p className="text-muted-foreground">First Robotic Competition • Windsor, Canada</p>
+                  </div>
+                  <div className="text-right mt-1 md:mt-0">
+                    <p className="text-sm text-muted-foreground">Mar 2025</p>
+                  </div>
+                </div>
+                <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1 ml-1">
+                  <li>Contributed to the smooth execution of a large-scale robotics competition by promptly resetting the playing field and verifying game element placement</li>
+                  <li>Prioritized safety by diligently removing debris and supervising team members and robots during transitions</li>
+                  <li>Collaborated effectively with the Field Supervisor and event staff to optimize match transitions and ensure the event progressed efficiently</li>
+                </ul>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <Badge variant="outline" className="bg-primary/5">Event Management</Badge>
+                  <Badge variant="outline" className="bg-primary/5">Team Collaboration</Badge>
+                  <Badge variant="outline" className="bg-primary/5">Safety Protocols</Badge>
+                  <Badge variant="outline" className="bg-primary/5">Robotics</Badge>
                 </div>
               </div>
             </div>
           </Card>
         </motion.div>
-
-        {/* Hobbies & Interests - Personal side */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          <Card className="p-8 backdrop-blur-xl bg-card/50 border-primary/10">
-            <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-6 h-6 text-primary"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-              Hobbies & Interests
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {hobbies.map((hobby, index) => (
-                <div key={index} className="space-y-2">
-                  <Badge variant="outline" className="bg-primary/5 text-base py-2 px-3">
-                    {hobby.emoji} {hobby.name}
-                  </Badge>
-                  <p className="text-sm text-muted-foreground pl-2">
-                    {hobby.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </Card>
         </motion.div>
       </div>
     </div>

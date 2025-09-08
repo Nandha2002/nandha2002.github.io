@@ -19,7 +19,7 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="text-xl font-bold">
-            Bjorn Melin | Portfolio
+            Nandha Kumar Reddy Kaipa | Portfolio
           </Link>
 
           {/* Desktop Navigation */}
@@ -44,13 +44,6 @@ export function Navbar() {
             >
               Projects
             </Link>
-            {/* <NavSeparator />
-            <Link
-              href="/blog"
-              className="text-foreground/60 hover:text-foreground"
-            >
-              Blog
-            </Link> */}
             <NavSeparator />
             <Link
               href="/contact"

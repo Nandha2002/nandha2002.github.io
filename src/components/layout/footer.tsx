@@ -1,10 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { BookText } from "lucide-react";
-import { BookOpenCheck } from "lucide-react";
 
 export function Footer() {
   return (
@@ -15,8 +13,9 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Portfolio</h3>
             <p className="text-sm text-foreground/60">
-              © {new Date().getFullYear()} Bjorn Melin. All rights reserved.
+              © {new Date().getFullYear()} Nandha Kumar Reddy Kaipa. All rights reserved.
             </p>
+            <p className="text-sm text-foreground/60">Credits to Bjorn Melin </p>
           </div>
 
           {/* Quick Links */}
@@ -35,12 +34,6 @@ export function Footer() {
               >
                 Projects
               </Link>
-              {/* <Link
-                href="/blog"
-                className="text-sm text-foreground/60 hover:text-foreground"
-              >
-                Blog
-              </Link> */}
               <Link
                 href="/contact"
                 className="text-sm text-foreground/60 hover:text-foreground"
@@ -50,12 +43,35 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Social Links */}
+          {/* Contact & Social Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Connect</h3>
-            <div className="flex space-x-4">
+            <div className="flex flex-col space-y-2">
               <a
-                href="https://github.com/bjornmelin"
+                href="mailto:kaipanandha9491@gmail.com"
+                className="text-sm text-foreground/60 hover:text-foreground flex items-center gap-2"
+              >
+                <Mail size={16} />
+                kaipanandha9491@gmail.com
+              </a>
+              <a
+                href="mailto:kaipa@uwindsor.ca"
+                className="text-sm text-foreground/60 hover:text-foreground flex items-center gap-2"
+              >
+                <Mail size={16} />
+                kaipa@uwindsor.ca (University)
+              </a>
+              <a
+                href="tel:519-567-9924"
+                className="text-sm text-foreground/60 hover:text-foreground flex items-center gap-2"
+              >
+                <Phone size={16} />
+                519-567-9924
+              </a>
+            </div>
+            <div className="flex space-x-4 mt-4">
+              <a
+                href="https://github.com/Nandha2002"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-foreground"
@@ -64,38 +80,13 @@ export function Footer() {
                 <GitHubLogoIcon className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/bjorn-melin"
+                href="https://linkedin.com/in/kaipanandhakumarreddy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-foreground"
                 aria-label="LinkedIn"
               >
                 <LinkedInLogoIcon className="w-5 h-5" />
-              </a>
-              <a
-                href="https://medium.com/@bjornmelin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-foreground"
-                aria-label="Medium"
-              >
-                <BookText size={20} />
-              </a>
-              <a
-                href="https://orcid.org/0009-0004-1978-3356"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-foreground"
-                aria-label="ORCID"
-              >
-                <BookOpenCheck size={20} />
-              </a>
-              <a
-                href="mailto:bjornmelin16@gmail.com"
-                className="text-foreground/60 hover:text-foreground"
-                aria-label="Email"
-              >
-                <Mail size={20} />
               </a>
             </div>
           </div>

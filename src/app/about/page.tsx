@@ -1,16 +1,37 @@
-import { Metadata } from "next";
-import { AboutDetail } from "@/components/sections/about-detail";
+import { Hero } from "@/components/sections/hero";
+import { About } from "@/components/sections/about";
+import { FeaturedProjects } from "@/components/sections/featured-projects";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About - Bjorn Melin | Senior Data Scientist & Cloud Architect",
+  title: "Nandha Kumar Reddy Kaipa - AI & Machine Learning Engineer | Data Analytics Specialist",
   description:
-    "Learn more about Bjorn Melin, a Senior Data Scientist and Cloud Solutions Architect with 6 AWS certifications, specializing in AI/ML solutions and cloud architecture.",
+    "Portfolio of Nandha Kumar Reddy Kaipa, an AI & Machine Learning Engineer and Data Analytics Specialist pursuing Master's in AI at University of Windsor. Specialized in computer vision, NLP, IoT automation, and cross-lingual phishing detection.",
+  openGraph: {
+    type: 'website',
+    title: 'Nandha Kumar Reddy Kaipa - AI & Machine Learning Engineer',
+    description: 'Portfolio of Nandha Kumar Reddy Kaipa, an AI & Machine Learning Engineer and Data Analytics Specialist pursuing Master\'s in AI at University of Windsor.',
+    images: [{
+      url: '/screenshots/hero-preview.png',
+      width: 1200,
+      height: 630,
+      alt: 'Nandha Kumar Reddy Kaipa - Portfolio Hero Section'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nandha Kumar Reddy Kaipa - AI & Machine Learning Engineer',
+    description: 'Portfolio of Nandha Kumar Reddy Kaipa, an AI & Machine Learning Engineer and Data Analytics Specialist pursuing Master\'s in AI at University of Windsor.',
+    images: ['/screenshots/hero-preview.png']
+  }
 };
 
-export default function AboutPage() {
+export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <AboutDetail />
+      <Hero />
+      <About />
+      <FeaturedProjects />
     </main>
   );
 }

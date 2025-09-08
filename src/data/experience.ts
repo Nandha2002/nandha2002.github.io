@@ -19,213 +19,103 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    title: "Senior Data Scientist",
-    company: "3M",
-    location: "Maplewood, Minnesota, United States",
-    startDate: "May 2024",
+    title: "Master's Student - Artificial Intelligence Stream",
+    company: "University of Windsor",
+    location: "Windsor, Ontario, Canada",
+    startDate: "Jan 2025",
     endDate: "Present",
-    isRemote: true,
     achievements: [
       {
-        text:
-          "Led a high-profile neuro-symbolic AI project that reduced training data needs by 40% and " +
-          "solved complex material science challenges. Delivered groundbreaking results in Atari benchmarks " +
-          "and contributed to a Nature manuscript, earning recognition from senior executives, including the CTO.",
+        text: "Pursuing Master of Applied Computing with specialization in Artificial Intelligence, maintaining 80% average in advanced coursework."
       },
       {
-        text:
-          "Migrated 3M's Corporate Research Analytical Lab's infrastructure to AWS, cutting cloud costs by " +
-          "60% and establishing scalable frameworks for manufacturing and divisional teams.",
+        text: "Completed advanced coursework in Software Engineering (Agile & Waterfall methodologies), Database Topics (Hadoop, Relational Databases), and Systems Programming (UNIX/LINUX)."
       },
       {
-        text: "Developed a Random Forest machine learning model (>95% accuracy) that boosted property uniformity by 20%.",
+        text: "Actively engaged in Machine Learning coursework focusing on Classification and Regression Algorithms with hands-on implementation."
       },
       {
-        text:
-          "Standardized IaC with reusable CloudFormation templates, reducing deployment times by 60%. " +
-          "Transitioned CI/CD pipelines to GitHub Actions, increasing deployment reliability by 50% " +
-          "with automated branching and testing strategies.",
-      },
-      {
-        text:
-          "Streamlined automation and deployment processes by transitioning CI/CD pipelines to GitHub Actions and " +
-          "developing CloudFormation IaC, improving reliability and reducing deployment times by up to 60%. " +
-          "Designed Python libraries and reusable Docker images, cutting dependency loads by 80% and ensuring " +
-          "consistent, efficient workflows across projects.",
-      },
+        text: "Preparing for upcoming 4-8 month internship opportunity starting January 2025 as part of program requirements."
+      }
     ],
     skills: [
-      { name: "Neuro-symbolic AI" },
-      { name: "Deep Learning" },
-      { name: "FastAPI" },
-      { name: "AWS" },
       { name: "Machine Learning" },
-      { name: "Reinforcement Learning" },
-      { name: "CloudFormation" },
-      { name: "GitHub Actions" },
+      { name: "Agile Methodology" },
+      { name: "Hadoop" },
+      { name: "UNIX/LINUX" },
+      { name: "Advanced Database Systems" },
+      { name: "Software Engineering" }
+    ],
+  },
+  {
+    title: "Data Analytics Trainee",
+    company: "Med Tour Easy",
+    location: "Delhi, India",
+    startDate: "Aug 2023",
+    endDate: "Sep 2023",
+    achievements: [
+      {
+        text: "Collaborated with Data Analytics professionals during intensive traineeship under project mentor guidance to gain hands-on experience in real-world data analysis."
+      },
+      {
+        text: "Developed comprehensive project 'Analyze Death Age Difference of Right-Hand users with Left-Hand users' using advanced statistical methods and data visualization tools."
+      },
+      {
+        text: "Enhanced understanding of age-related trends across handedness groups through rigorous statistical analysis and pattern recognition."
+      },
+      {
+        text: "Applied Python programming and MySQL database management to process and analyze large datasets effectively."
+      }
+    ],
+    skills: [
       { name: "Python" },
+      { name: "Machine Learning" },
+      { name: "MySQL" },
+      { name: "Statistical Analysis" },
+      { name: "Data Visualization" },
+      { name: "Data Processing" }
     ],
   },
   {
-    title: "Advanced Data Scientist",
-    company: "3M",
-    location: "Maplewood, Minnesota, United States",
-    startDate: "Dec 2022",
-    endDate: "May 2024",
-    isRemote: true,
+    title: "Machine Learning Development Intern",
+    company: "NULL CLASS",
+    location: "Coimbatore, India",
+    startDate: "May 2023",
+    endDate: "Jul 2023",
     achievements: [
       {
-        text:
-          "Delivered a $750M revenue-saving solution, leading defect detection via PCA and clustering algorithms " +
-          "to identify adhesive defects, ensuring FTIR-ATR measurement consistency in clients production environments.",
+        text: "Completed comprehensive development internship focused on facial recognition techniques to strengthen practical skills in advanced model building and deployment."
       },
       {
-        text: "Created real-time analysis workflows, cutting data processing time by 80% and improving neural network accuracy by 20%.",
+        text: "Implemented complex tasks related to 'Facial Features' detection using sophisticated data processing and pattern recognition methods."
       },
       {
-        text: "Built scalable libraries for regression, classification, and clustering used by global R&D teams",
+        text: "Improved accuracy in facial feature detection and classification through optimization of machine learning algorithms and deep learning techniques."
       },
       {
-        text: "Founded Python Plotly Dash Working Group; launched 12 data science apps in one year, impacting 100+ users across 6 divisions",
-      },
+        text: "Gained hands-on experience with computer vision libraries and frameworks for real-world application development."
+      }
     ],
     skills: [
-      { name: "PCA" },
-      { name: "Clustering" },
-      { name: "Neural Networks" },
       { name: "Python" },
-      { name: "Plotly Dash" },
-      { name: "AWS" },
-      { name: "Databricks" },
-    ],
-  },
-  {
-    title: "Advanced Software Engineer",
-    company: "3M",
-    location: "Salt Lake City, Utah, United States",
-    startDate: "Mar 2022",
-    endDate: "Dec 2022",
-    achievements: [
-      {
-        text:
-          "Migrated from Internet Explorer to Chromium Embedded Framework (C#/.NET), eliminating " +
-          "vulnerabilities and boosting system performance by 25%.",
-      },
-      {
-        text: "Automated medical coding/billing, improving coding accuracy by 20% and processing time by 30%.",
-      },
-      {
-        text:
-          "Reduced infrastructure costs by 35% through deploying Kubernetes-based microservices with " +
-          "optimized container scaling and resource allocation.",
-      },
-      {
-        text: "Implemented ClickOnce deployment, cutting deployment costs by 20%.",
-      },
-    ],
-    skills: [
-      { name: "C#" },
-      { name: ".NET" },
-      { name: "Kubernetes" },
-      { name: "Microservices" },
-      { name: "DevOps" },
-      { name: "ClickOnce" },
-      { name: "Java" },
-    ],
-  },
-  {
-    title: "Software Engineer",
-    company: "3M",
-    location: "Maplewood, Minnesota, United States",
-    startDate: "Sep 2020",
-    endDate: "Mar 2022",
-    achievements: [
-      {
-        text:
-          "Designed and deployed a cloud-based system for managing 3M's R&D research and reports using Angular, " +
-          "Java, AWS, and Spring Framework. Migrated on-prem storage to AWS, achieving 40% scalability improvement and " +
-          "$2M in cost savings by optimizing services like Jenkins, Lambda, ECS, and RDS.",
-      },
-      {
-        text:
-          "Led a team of software engineers to deliver a cloud-based project one month ahead of schedule and " +
-          "10% under budget, saving $50K+ in overhead costs while exceeding client expectations.",
-      },
-      {
-        text:
-          "Achieved 3M's Circle of Technical Excellence & Innovation (CTE&I) Award, the company's highest R&D " +
-          "honor for scientists and engineers, for developing 3M's most-used internal cloud platform.",
-      },
-      {
-        text: "Shortened R&D IT software development lifecycles by 20% through managing Agile methodologies.",
-      },
-    ],
-    skills: [
-      { name: "Java" },
-      { name: "AWS" },
-      { name: "Spring Framework" },
-      { name: "Angular" },
-      { name: "Jenkins" },
-      { name: "MySQL" },
-      { name: "Agile" },
-    ],
-  },
-  {
-    title: "Software Development Engineer",
-    company: "C-TEQ Data Consultants",
-    location: "Minneapolis, Minnesota, United States",
-    startDate: "Jan 2020",
-    endDate: "Sep 2020",
-    achievements: [
-      {
-        text: "Increased system performance by 90% via designing custom Java-based APIs",
-      },
-      {
-        text:
-          "Built a cross-platform desktop app with JavaFX and MySQL, allowing clients to " +
-          "process and analyze large datasets efficiently.",
-      },
-    ],
-    skills: [
-      { name: "Java" },
-      { name: "JavaFX" },
-      { name: "MySQL" },
-      { name: "APIs" },
+      { name: "SQL" },
+      { name: "Machine Learning" },
+      { name: "Deep Learning" },
+      { name: "Computer Vision" },
+      { name: "Facial Recognition" },
+      { name: "Pattern Recognition" }
     ],
   },
 ];
 
 export const previousExperiences: Experience[] = [
   {
-    title: "Undergraduate IoT Researcher",
-    company: "Augsburg University",
-    location: "Minneapolis, Minnesota, United States",
-    startDate: "Nov 2019",
-    endDate: "May 2020",
+    title: "Field Re-Setter Volunteer",
+    company: "First Robotic Competition",
+    location: "Windsor, Canada",
+    startDate: "Mar 2025",
+    endDate: "Mar 2025",
     achievements: [],
     skills: [],
-  },
-  {
-    title: "IT Data Analyst Intern",
-    company: "3M",
-    location: "Maplewood, Minnesota, United States",
-    startDate: "May 2019",
-    endDate: "Aug 2019",
-    achievements: [],
-    skills: [],
-  },
-  {
-    title: "Undergraduate AI Researcher",
-    company: "Augsburg University",
-    location: "Minneapolis, Minnesota, United States",
-    startDate: "Dec 2018",
-    endDate: "Oct 2019",
-    achievements: [],
-    skills: [
-      { name: "Python" },
-      { name: "Neural Networks" },
-      { name: "Machine Learning" },
-      { name: "Game Learning" },
-    ],
   },
 ];

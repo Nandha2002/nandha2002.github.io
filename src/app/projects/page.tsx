@@ -3,9 +3,9 @@ import { ProjectGrid } from "@/components/projects/project-grid";
 import { projectsData } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects - Bjorn Melin",
+  title: "Projects - Nandha Kumar Reddy Kaipa",
   description:
-    "Explore my portfolio of projects in machine learning and AI, cloud architecture, and web development.",
+    "Explore my portfolio of projects in AI & machine learning, data analytics, IoT automation, and computer vision applications.",
 };
 
 export default function ProjectsPage() {
@@ -16,9 +16,9 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <p className="text-xl text-muted-foreground">
-          A collection of projects showcasing my work in machine learning and
-          AI, cloud architecture, and web development. As well as open source
-          contributions.
+          A collection of projects showcasing my work in AI & machine learning, 
+          data analytics, IoT automation, and computer vision applications. 
+          Built during my academic journey and internship experiences.
         </p>
       </div>
       <div className="mt-16">

@@ -2,8 +2,8 @@ import { type Metadata } from "next";
 import { ContactForm } from "@/components/contact/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact | Bjorn Melin",
-  description: "Get in touch with me through this contact form.",
+  title: "Contact | Nandha Kumar Reddy Kaipa",
+  description: "Get in touch with me for collaboration opportunities, project discussions, or any inquiries.",
 };
 
 export default function ContactPage() {
@@ -13,8 +13,9 @@ export default function ContactPage() {
         <div className="space-y-2">
           <h1 className="text-3xl font-bold tracking-tighter">Contact Me</h1>
           <p className="text-muted-foreground">
-            Have a question or want to get in touch? Fill out the form below and
-            I&apos;ll get back to you as soon as possible.
+            Have a question about my projects, looking for collaboration opportunities, 
+            or want to discuss AI/ML solutions? I&apos;d love to hear from you! 
+            Fill out the form below and I&apos;ll get back to you as soon as possible.
           </p>
         </div>
         <ContactForm />

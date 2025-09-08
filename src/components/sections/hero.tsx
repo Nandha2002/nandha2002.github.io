@@ -17,8 +17,8 @@ export function Hero() {
           >
             <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary/10">
               <Image
-                src="/headshot/headshot-2024.jpg"
-                alt="Bjorn Melin"
+                src="/headshot/headshot-2024.jpg" // Update with your actual headshot path
+                alt="Nandha Kumar Reddy Kaipa"
                 fill
                 sizes="(max-width: 768px) 192px, 256px"
                 priority
@@ -33,11 +33,11 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col items-center"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              Hi, I&apos;m Bjorn Melin
+            <h1 className="text-4xl md:text-6xl lg:text-5xl font-bold tracking-tight">
+              Hi, I&apos;m Nandha Kumar Reddy Kaipa
             </h1>
             <p className="mt-6 text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl">
-              Senior Data Scientist | Cloud Solutions Architect | 6x AWS Certified | AI/ML & GenAI Innovator
+              Aspiring Data Engineer | Student at University of Windsor | Python, SQL, Spark | ETL & Data Analytics | AI & ML
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link

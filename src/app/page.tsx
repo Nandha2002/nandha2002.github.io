@@ -4,24 +4,24 @@ import { FeaturedProjects } from "@/components/sections/featured-projects";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bjorn Melin - Senior Data Scientist & Cloud Solutions Architect",
+  title: "Nandha Kumar Reddy Kaipa - AI & Machine Learning Engineer | Data Analytics Specialist",
   description:
-    "Portfolio of Bjorn Melin, a Senior Data Scientist and Cloud Solutions Architect specializing in AI/ML solutions, GenAI innovation, and cloud-native architectures. 6x AWS Certified professional with expertise in machine learning and scalable cloud solutions.",
+    "Portfolio of Nandha Kumar Reddy Kaipa, an AI & Machine Learning Engineer and Data Analytics Specialist pursuing Master's in AI at University of Windsor. Specialized in computer vision, NLP, IoT automation, and cross-lingual phishing detection.",
   openGraph: {
     type: 'website',
-    title: 'Bjorn Melin - Senior Data Scientist & Cloud Solutions Architect',
-    description: 'Portfolio of Bjorn Melin, a Senior Data Scientist and Cloud Solutions Architect specializing in AI/ML solutions, GenAI innovation, and cloud-native architectures.',
+    title: 'Nandha Kumar Reddy Kaipa - AI & Machine Learning Engineer',
+    description: 'Portfolio of Nandha Kumar Reddy Kaipa, an AI & Machine Learning Engineer and Data Analytics Specialist pursuing Master\'s in AI at University of Windsor.',
     images: [{
       url: '/screenshots/hero-preview.png',
       width: 1200,
       height: 630,
-      alt: 'Bjorn Melin - Portfolio Hero Section'
+      alt: 'Nandha Kumar Reddy Kaipa - Portfolio Hero Section'
     }]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Bjorn Melin - Senior Data Scientist & Cloud Solutions Architect',
-    description: 'Portfolio of Bjorn Melin, a Senior Data Scientist and Cloud Solutions Architect specializing in AI/ML solutions, GenAI innovation, and cloud-native architectures.',
+    title: 'Nandha Kumar Reddy Kaipa - AI & Machine Learning Engineer',
+    description: 'Portfolio of Nandha Kumar Reddy Kaipa, an AI & Machine Learning Engineer and Data Analytics Specialist pursuing Master\'s in AI at University of Windsor.',
     images: ['/screenshots/hero-preview.png']
   }
 };

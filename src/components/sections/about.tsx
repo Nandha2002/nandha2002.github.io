@@ -24,12 +24,12 @@ export function About() {
             About Me
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Crafting AI Solutions &{" "}
-            <span className="text-primary">Cloud Architecture</span>
+            Building AI Solutions &{" "}
+            <span className="text-primary">Data-Driven Insights</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Senior Data Scientist and AWS Solutions Architect specializing in
-            AI/ML innovations and scalable cloud architecture
+            Master's student in AI at University of Windsor, specializing in 
+            machine learning, computer vision, and data analytics with hands-on industry experience
           </p>
         </div>
 
@@ -44,11 +44,11 @@ export function About() {
               <h3 className="text-2xl font-semibold">Background</h3>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              As a Senior Data Scientist and Cloud Solutions Architect with 6
-              AWS certifications, I specialize in developing cutting-edge AI/ML
-              solutions and GenAI innovations. My expertise spans cloud
-              architecture, machine learning, and building scalable AI solutions
-              that drive business value.
+              Currently pursuing Master of Applied Computing in Artificial Intelligence 
+              at University of Windsor with an 80% average. Experienced in developing 
+              cross-lingual ML models, smart IoT systems, and computer vision applications. 
+              Strong foundation in Python, machine learning algorithms, and data analytics 
+              with hands-on industry experience from internships at Med Tour Easy and NULL CLASS.
             </p>
           </Card>
 

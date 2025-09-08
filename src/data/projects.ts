@@ -3,136 +3,132 @@ import { Project } from "@/types/project";
 export const projectsData: Project[] = [
   {
     id: "1",
-    title: "Stardex - Explore GitHub Stars Intelligently",
+    title: "Phishing Detection Model for SMS/Text Messages",
     description:
-      "🌟 Stardex: Explore GitHub Stars Intelligently. Stardex is a powerful web app that lets you search, " +
-      "filter, and cluster any GitHub user's starred repositories. Discover hidden patterns and find your next " +
-      "favorite project with intelligent, AI-powered exploration.",
-    image: "/projects/stardex.png",
+      "Built a cross-lingual SMS phishing detector using Hindi and Telugu datasets with TF-IDF and " +
+      "preprocessing to enhance multilingual detection accuracy. Applied ML and Indic language models " +
+      "(SVM, Random Forest, LSTM, Indic BERT, MuRIL) achieving up to 97.72% accuracy in phishing detection.",
+    image: "/projects/phishing-detection.png",
     technologies: [
-      "Next.js",
       "Python",
-      "FastAPI",
       "Machine Learning",
-      "AWS Lambda",
-      "Clustering",
-      "AWS S3",
-      "Sklearn",
-      "PCA",
-      "Hierarchical Clustering",
-      "K-means Clusering",
-      "AWS API Gateway",
-      "tailwindcss",
-      "AWS CDK",
-      "Text Embeddings",
+      "SQL",
+      "TF-IDF",
+      "SVM",
+      "Random Forest",
+      "LSTM",
+      "Indic BERT",
+      "MuRIL",
+      "Natural Language Processing",
+      "Cross-lingual Detection",
+      "Text Classification"
     ],
-    category: "AI & Machine Learning",
+    category: "AI & Machine Learning", // This should match the filter buttons
     links: {
-      github: "https://github.com/BjornMelin/stardex",
-      live: "https://stardex.bjornmelin.io",
+      github: "https://github.com/Nandha2002/Group_Project",
     },
     featured: true,
   },
   {
     id: "2",
-    title: "PolyAgent Research Intelligence",
+    title: "AI and Sensor Driven System for Irrigation",
     description:
-      "A modular, multi-agent AI research and report generation platform. Enter any topic, and " +
-      "PolyAgent Research Intelligence orchestrates multiple AI agents to retrieve literature, " +
-      "analyze data, and generate a polished report. Built for researchers and AI/ML engineers, " +
-      "leveraging LangChain, FastAPI, PostgreSQL, advanced LLMs, and a Next.js front-end.",
-    image: "/projects/polyagent-research.png",
+      "Developed a smart irrigation system to determine and release required water level in agricultural " +
+      "fields based on real-time parameters including soil moisture, humidity, and temperature. " +
+      "Automated water supply process using sensor data analysis to optimize water usage and improve crop health.",
+    image: "/projects/smart-irrigation.png",
     technologies: [
+      "Python",
       "Machine Learning",
-      "AI",
-      "Next.js",
-      "Grafana",
-      "Prometheus",
-      "Multi-Agent Systems",
-      "AI Research",
-      "Agentic AI",
-      "LangChain",
-      "FastAPI",
-      "Large Language Models",
-      "AI Engineering",
-      "OpenRouter",
-      "FAISS Vector Database",
-      "tailwindcss",
+      "SQL",
+      "Arduino",
+      "IoT",
+      "Sensor Integration",
+      "Data Analysis",
+      "Agricultural Technology",
+      "Automation",
+      "Real-time Processing"
     ],
-    category: "AI & Machine Learning",
+    category: "IoT & Automation", // New category that matches your work
     links: {
-      github: "https://github.com/BjornMelin/polyagent-research-intelligence",
+      github: "https://github.com/Nandha2002/Personal_Project2",
     },
     featured: true,
   },
   {
     id: "3",
-    title: "AIScout",
+    title: "Music Recommendation Using Facial Expression",
     description:
-      "Real-time AI/ML content aggregator and discovery platform. Automatically curates cutting-edge research papers, repositories, articles, and discussions about artificial intelligence, machine learning, and LLMs. Built with React, Python, and AWS.",
-    image: "/projects/ai-scout.png",
+      "Designed a system to identify user emotions through facial expressions leveraging Convolutional " +
+      "Neural Networks (CNN) to enable emotion-based interaction. Integrated Spotify API to fetch and " +
+      "play songs based on detected emotion, providing a personalized music experience based on facial cues.",
+    image: "/projects/music-recommendation.png",
     technologies: [
-      "React",
-      "Real-Time",
-      "AI",
-      "ML",
-      "Technology",
-      "AI-Research",
-      "Content-Discovery",
-      "Postcss",
-      "Zod",
-      "Zustand",
-      "TailwindCSS",
-      "Shadcn",
-      "Next.js",
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "CNN",
+      "Computer Vision",
+      "Facial Recognition",
+      "Emotion Detection",
+      "Spotify API",
+      "HTML",
+      "CSS"
     ],
-    category: "Web Development",
+    category: "AI & Machine Learning",
     links: {
-      github: "https://github.com/BjornMelin/aiscout-frontend",
-      //   demo: 'https://demo.example.com',
+      github: "https://github.com/Nandha2002/Personal_Project",
     },
     featured: true,
   },
   {
     id: "4",
-    title: "Portfolio Website",
+    title: "Facial Features Recognition System",
     description:
-      "A modern portfolio website built with Next.js and AWS services.",
-    image: "/projects/portfolio.png",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "AWS"],
-    category: "Web Development",
+      "Implemented facial recognition techniques during Machine Learning Development internship at NULL CLASS. " +
+      "Focused on facial feature detection and classification using data processing and pattern recognition " +
+      "methods to improve accuracy in facial feature identification.",
+    image: "/projects/facial-recognition.png",
+    technologies: [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "Computer Vision",
+      "Facial Recognition",
+      "Pattern Recognition",
+      "Data Processing",
+      "Feature Detection",
+      "Classification Algorithms"
+    ],
+    category: "AI & Machine Learning",
     links: {
-      github: "https://github.com/bjornmelin/bjornmelin-platform-io",
-      live: "https://bjornmelin.io",
+      // Add GitHub link if available
     },
     featured: false,
   },
   {
     id: "5",
-    title: "PDFusion",
+    title: "Death Age Analysis: Handedness Impact Study",
     description:
-      "A lightweight Python utility for effortlessly merging multiple PDF files into a single document.",
-    image: "/projects/pdfusion.png",
+      "Developed a comprehensive data analysis project titled 'Analyze Death Age Difference of Right-Hand users " +
+      "with Left-Hand users' using statistical methods and data visualization tools. Enhanced understanding " +
+      "of age-related trends across handedness groups through rigorous data analysis.",
+    image: "/projects/data-analysis.png",
     technologies: [
       "Python",
-      "CLI",
-      "PDF",
-      "Automation",
-      "Utilities",
-      "Python-Library",
-      "File-Management",
-      "Command-Line-Tool",
-      "Document-Management",
-      "Batch-Processing",
-      "Pypdf2",
-      "PDF-Manipulation",
-      "PDF-Merger",
-      "Document-Processing",
-      "PDF-Tools",
+      "Machine Learning",
+      "MySQL",
+      "Data Analysis",
+      "Statistical Methods",
+      "Data Visualization",
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Statistical Analysis"
     ],
-    category: "AI & Machine Learning",
+    category: "Data Science",
     links: {
-      github: "https://github.com/BjornMelin/pdfusion",
+      // Add GitHub link if available
     },
     featured: false,
   },

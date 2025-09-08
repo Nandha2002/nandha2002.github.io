@@ -1,86 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { type ContactFormData, contactFormSchema } from "@/lib/schemas/contact";
-import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { CheckCircle2, AlertCircle, Loader2, Mail } from "lucide-react";
 
-interface APIErrorResponse {
-  error: string;
-  code?: string;
-  details?: Array<{ message: string; path: string[] }>;
+interface ContactFormData {
+  from_name: string;
+  from_email: string;
+  message: string;
 }
 
 export function ContactForm() {
+  const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">(
-    "idle"
-  );
-  const { toast } = useToast();
+  const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">("idle");
 
   const {
     register,
     handleSubmit,
     reset,
-    setError,
-    formState: { errors, isValid },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactFormSchema),
-    mode: "onBlur",
-  });
+    formState: { errors },
+  } = useForm<ContactFormData>();
 
   const onSubmit = async (data: ContactFormData) => {
+    if (!form.current) return;
+    
     setIsSubmitting(true);
     setFormStatus("idle");
 
     try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/contact`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
+      const result = await emailjs.sendForm(
+        'service_0621rq5',     // Replace this with your service ID
+        'template_fbsjvdx',    // Replace this with your template ID
+        form.current,
+        'rfncPrpxCvbEKb75F'      // Replace this with your public key
       );
 
-      const result = (await response.json()) as APIErrorResponse;
-
-      if (!response.ok) {
-        // Handle validation errors
-        if (response.status === 400 && result.details) {
-          result.details.forEach(({ message, path }) => {
-            const field = path[0] as keyof ContactFormData;
-            setError(field, { message });
-          });
-          throw new Error("Please check the form for errors");
-        }
-
-        throw new Error(result.error || "Failed to send message");
-      }
-
+      console.log('Email sent successfully:', result.text);
       setFormStatus("success");
-      toast({
-        title: "Message sent!",
-        description: "Thanks for your message. I'll get back to you soon.",
-      });
       reset();
     } catch (error) {
+      console.error('Failed to send email:', error);
       setFormStatus("error");
-      toast({
-        title: "Error",
-        description:
-          error instanceof Error ? error.message : "Failed to send message",
-        variant: "destructive",
-      });
     } finally {
       setIsSubmitting(false);
     }
@@ -91,10 +58,8 @@ export function ContactForm() {
       {formStatus === "success" && (
         <Alert className="bg-green-50 border-green-200">
           <CheckCircle2 className="h-4 w-4 text-green-600" />
-          <AlertTitle>Message Sent Successfully!</AlertTitle>
           <AlertDescription>
-            Thank you for your message. I&apos;ll get back to you as soon as
-            possible.
+            Thank you for your message! I'll get back to you as soon as possible.
           </AlertDescription>
         </Alert>
       )}
@@ -102,56 +67,52 @@ export function ContactForm() {
       {formStatus === "error" && (
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
-          <AlertTitle>Failed to Send Message</AlertTitle>
           <AlertDescription>
-            Please try again. If the problem persists, you can email me directly
-            at{" "}
+            Failed to send message. Please try again or email me directly at{" "}
             <a
-              href={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`}
+              href="mailto:kaipanandha9491@gmail.com"
               className="underline hover:text-red-400"
             >
-              {process.env.NEXT_PUBLIC_CONTACT_EMAIL}
+              kaipanandha9491@gmail.com
             </a>
           </AlertDescription>
         </Alert>
       )}
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
+      <form ref={form} onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="space-y-2">
-          <Label htmlFor="name">Name</Label>
+          <Label htmlFor="from_name">Name</Label>
           <Input
-            id="name"
+            id="from_name"
             type="text"
             placeholder="Your name"
-            {...register("name")}
-            aria-describedby={errors.name ? "name-error" : undefined}
-            aria-invalid={!!errors.name}
+            {...register("from_name", { required: "Name is required" })}
             disabled={isSubmitting}
-            className={errors.name ? "border-red-500" : ""}
+            className={errors.from_name ? "border-red-500" : ""}
           />
-          {errors.name && (
-            <p id="name-error" className="text-sm text-red-500">
-              {errors.name.message}
-            </p>
+          {errors.from_name && (
+            <p className="text-sm text-red-500">{errors.from_name.message}</p>
           )}
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="email">Email</Label>
+          <Label htmlFor="from_email">Email</Label>
           <Input
-            id="email"
+            id="from_email"
             type="email"
             placeholder="your.email@example.com"
-            {...register("email")}
-            aria-describedby={errors.email ? "email-error" : undefined}
-            aria-invalid={!!errors.email}
+            {...register("from_email", { 
+              required: "Email is required",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Invalid email address"
+              }
+            })}
             disabled={isSubmitting}
-            className={errors.email ? "border-red-500" : ""}
+            className={errors.from_email ? "border-red-500" : ""}
           />
-          {errors.email && (
-            <p id="email-error" className="text-sm text-red-500">
-              {errors.email.message}
-            </p>
+          {errors.from_email && (
+            <p className="text-sm text-red-500">{errors.from_email.message}</p>
           )}
         </div>
 
@@ -160,35 +121,72 @@ export function ContactForm() {
           <Textarea
             id="message"
             placeholder="Your message..."
-            {...register("message")}
-            aria-describedby={errors.message ? "message-error" : undefined}
-            aria-invalid={!!errors.message}
+            {...register("message", { 
+              required: "Message is required",
+              minLength: {
+                value: 10,
+                message: "Message must be at least 10 characters"
+              }
+            })}
             disabled={isSubmitting}
             rows={5}
             className={errors.message ? "border-red-500" : ""}
           />
           {errors.message && (
-            <p id="message-error" className="text-sm text-red-500">
-              {errors.message.message}
-            </p>
+            <p className="text-sm text-red-500">{errors.message.message}</p>
           )}
         </div>
 
-        <Button
-          type="submit"
-          disabled={isSubmitting || !isValid}
-          className="w-full"
-        >
+        <Button type="submit" disabled={isSubmitting} className="w-full">
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
+              Sending Message...
             </>
           ) : (
-            "Send Message"
+            <>
+              <Mail className="mr-2 h-4 w-4" />
+              Send Message
+            </>
           )}
         </Button>
       </form>
+
+      {/* Alternative contact methods */}
+      <div className="border-t pt-6">
+        <h3 className="text-lg font-semibold mb-4">Other Ways to Reach Me</h3>
+        <div className="space-y-2">
+          <p className="text-sm">
+            <strong>Personal Email:</strong>{" "}
+            <a href="mailto:kaipanandha9491@gmail.com" className="text-primary hover:underline">
+              kaipanandha9491@gmail.com
+            </a>
+          </p>
+          <p className="text-sm">
+            <strong>University Email:</strong>{" "}
+            <a href="mailto:kaipa@uwindsor.ca" className="text-primary hover:underline">
+              kaipa@uwindsor.ca
+            </a>
+          </p>
+          <p className="text-sm">
+            <strong>Phone:</strong>{" "}
+            <a href="tel:519-567-9924" className="text-primary hover:underline">
+              519-567-9924
+            </a>
+          </p>
+          <p className="text-sm">
+            <strong>LinkedIn:</strong>{" "}
+            <a 
+              href="https://linkedin.com/in/kaipanandhakumarreddy" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              linkedin.com/in/kaipanandhakumarreddy
+            </a>
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
